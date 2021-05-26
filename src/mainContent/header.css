@@ -1,0 +1,46 @@
+/* Styles the Header component (title SVGs)*/
+/* Style the main container */
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  min-height: 108px;
+  padding: 3% 0%;
+  border-bottom: 4px black solid;
+}
+/* Adjust height and let the width auto correct */
+.header #Title {
+  width: auto;
+  height: 7vw;
+}
+/* Adjust height and let the width auto correct */
+.header #Slogan {
+  width: auto;
+  height: 4vw;
+}
+/* If larger than laptop, reduce the header size */
+@media only screen and (min-width: 1024px) {
+  .header {
+    padding: 2% 0%;
+  }
+  .header #Title {
+    height: 5vw;
+  }
+  .header #Slogan {
+    height: 3vw;
+  }
+}
+/* If on phone, increase the header sizes */
+@media only screen and (max-width: 468px) {
+  .header #Title {
+    width: auto;
+    height: 10vw;
+    padding-bottom: 1rem;
+  }
+  .header #Slogan {
+    width: auto;
+    height: 6vw;
+  }
+}

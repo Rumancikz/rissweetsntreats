@@ -1,0 +1,25 @@
+/* Styles the MainPicture component */
+/* Styles the main container  into a row that is evenly spaced within its parent's width*/
+.mainPicture {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  padding-top: 5%;
+}
+/* Each image gets rounded corners and the same size */
+.mainPicture img {
+  border-radius: 7px;
+  width: 25vw;
+  border: 3px black solid;
+  box-shadow: 5px 5px 15px #8b8b8b;
+}
+/* If larger than a laptop, decrease the size of the images and parent's padding */
+@media only screen and (min-width: 1024px) {
+  .mainPicture {
+    padding-top: 1%;
+  }
+  .mainPicture img {
+    width: 17vw;
+  }
+}

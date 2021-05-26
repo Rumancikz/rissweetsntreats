@@ -1,0 +1,35 @@
+/* Styles the Location component  */
+/* Styles the main container */
+.location {
+  background: #afbfaa;
+  border-radius: 100rem;
+  border: 3px black solid;
+  padding: 2vw;
+  margin: 5vw;
+  width: 90%;
+}
+/* Styles the words inside the div */
+.location p {
+  font-family: 'Shadows Into Light Two', cursive !important;
+  font-size: 2.7vw;
+  text-align: center;
+}
+/* If larger than laptop, shrink the size of the words and div */
+@media only screen and (min-width: 1024px) {
+  .location {
+    padding: 0.5vw;
+    margin: 2vw;
+  }
+  .location p {
+    font-size: 2.3vw;
+  }
+}
+/* If it is a phone, increase the size of the words and div */
+
+@media only screen and (max-width: 468px) {
+  .location p {
+    font-size: 4vw;
+    font-weight: 600;
+    padding-top: 0.3rem;
+  }
+}

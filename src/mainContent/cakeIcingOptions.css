@@ -1,0 +1,45 @@
+/* Styles the CakeIcingOptions component  */
+/* Styles the main container */
+.options {
+  display: flex;
+  justify-content: space-evenly;
+  width: 95%;
+  padding: 1vw;
+}
+/* Styles the two divs that contain either icing or cake flavors */
+.options :is(.cake, .icing) {
+  /* background: #afbfaa; */
+  border-radius: 15px;
+  border: 3px black solid;
+  width: 25vw;
+  text-align: center;
+  padding: 1rem;
+  font-size: 2vw;
+  box-shadow: 3px 3px 15px #8b8b8b;
+}
+/* Removes the bullets on each li inside of the two divs */
+.options :is(.cake, .icing) li {
+  list-style: none;
+}
+/* larger than laptops get the options next to eachother in columns */
+@media only screen and (min-width: 1024px) {
+  .options :is(.cake, .icing) ul {
+    columns: 2;
+  }
+}
+/* Tablet styling to change font size and adjust the line height */
+@media only screen and (max-width: 768px) {
+  .options :is(.cake, .icing) {
+    width: 38vw;
+    font-size: 3vw;
+    line-height: 2.2rem;
+  }
+}
+/* Phone styling to change font size and adjust the line height */
+@media only screen and (max-width: 468px) {
+  .options :is(.cake, .icing) {
+    width: 38vw;
+    font-size: 4.3vw;
+    line-height: unset;
+  }
+}

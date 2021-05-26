@@ -1,0 +1,89 @@
+/* Styles the Gallary component */
+/* Styles the main wrapper */
+.gallery {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 95%;
+}
+/* Sizes each sections title */
+.gallery h1 {
+  background-color: #afbfaa;
+  border-radius: 100rem;
+  border: 3px black solid;
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 4vw;
+  margin-bottom: 2vw;
+}
+/* Styles each image */
+.galleryImg {
+  width: 100%;
+  border-radius: 5%;
+}
+/* Creates a "messy" collage of images in 6 columns with no spacing between them */
+.innerGallery {
+  width: 100%;
+  line-height: 0;
+  column-count: 6;
+  column-gap: 0px;
+}
+/* Sytles the button that causes the Gallery component to render */
+.galleryButton {
+  width: fit-content;
+  padding: 2rem;
+  height: 3vw;
+  font-size: 2.3vw;
+  border-radius: 15px;
+  background-color: #afbfaa;
+  color: white;
+  margin-bottom: 3vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 10px 10px 15px #8b8b8b;
+}
+/* Sytles the button, on hover, that causes the Gallery component to render */
+.galleryButton:hover {
+  color: white;
+  background: #95a391;
+}
+.arrow {
+  width: 2rem;
+  height: 2rem;
+  margin-left: 1rem;
+}
+/* If large than laptop, decrease font size */
+@media only screen and (min-width: 1024px) {
+  .gallery h1 {
+    font-size: 2.5vw;
+  }
+}
+/* If smaller than a tablet change font size*/
+@media only screen and (max-width: 768px) {
+  .galleryButton {
+    font-size: 3vw;
+  }
+}
+/* If a phone, reduce the number of columns the images are in so that they can each be seen */
+@media only screen and (max-width: 468px) {
+  .innerGallery {
+    column-count: 4;
+  }
+  .galleryButton {
+    width: fit-content;
+    padding: 5vw;
+    height: 3vw;
+    font-size: 4vw;
+    border-radius: 15px;
+    background-color: #afbfaa;
+    margin-bottom: 3vw;
+  }
+  .galleryButton:hover {
+    color: white;
+    background: #95a391;
+  }
+}

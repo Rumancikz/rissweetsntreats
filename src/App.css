@@ -1,38 +1,44 @@
-.App {
-  text-align: center;
+/* General styling applied to the main App component */
+* {
+  padding: 0px;
+  margin: 0px;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Set CSS variables */
+:root {
+  --navWidth: 5rem;
+  --navHeight: 4rem;
+  --navColor: #afbfaa;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+html {
+  scroll-behavior: smooth;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Main's width is calculated in the App.tsx file with an inline styling using calc*/
+.main {
+  margin-left: var(--navWidth);
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  font-family: 'Shadows Into Light Two', cursive !important;
 }
-
-.App-link {
-  color: #61dafb;
+/* Prevents images from being dragged */
+img {
+  max-width: 100%;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* If larger than a laptop, add padding for the nav bar */
+@media only screen and (min-width: 1024px) {
+  .main {
+    margin-left: 7vw;
   }
-  to {
-    transform: rotate(360deg);
+}
+/* If phone, remove padding on the left since nav bar is now on the top */
+@media only screen and (max-width: 468px) {
+  .main {
+    margin-left: 0;
   }
 }

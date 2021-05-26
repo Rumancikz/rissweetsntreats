@@ -1,0 +1,70 @@
+/* Styles the Modal Component */
+/* Style the background to contain the entire screen and extend 20% lower than the screen incase the screen is scrolled on mobile */
+.bg {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: hsla(220, 0%, 0%, 0.7);
+  height: 120vh;
+  z-index: 2;
+}
+/* Styles the modal container to be the same size as it's
+ parent and center its contents horizontally and space them evenly vertically */
+.bg .modal {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  overflow: hidden;
+  height: 100vh;
+}
+/* Styles the image */
+.modal img {
+  height: 80%;
+  width: auto;
+  border-radius: 5%;
+}
+/* Styles the description section under the image */
+.modal .desc {
+  background: #afbfaa;
+  height: 15%;
+  width: 80%;
+  font-size: 4vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2vw;
+  border-radius: 100rem;
+  border: 3px black solid;
+}
+/* Styles the X in the top right of the screen */
+.modal .x {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  font-size: 2rem;
+  background: #afbfaa;
+  border-radius: 100rem;
+  height: 2.5rem;
+  width: 2.5rem;
+  text-align: center;
+  border: 3px black solid;
+}
+/* If on a phone, change the picure height to be off width instead of height */
+@media only screen and (max-width: 468px) {
+  .modal {
+    height: 120vh;
+  }
+  .modal img {
+    height: auto;
+    width: 80%;
+  }
+  .modal .desc {
+    font-size: 6vw;
+  }
+}

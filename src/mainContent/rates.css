@@ -1,0 +1,67 @@
+/* Styles the Rates component */
+/* Styles the main container to match the theme of other components */
+.rates {
+  background: #afbfaa;
+  border-radius: 100rem;
+  border: 3px black solid;
+  padding: 1vw;
+  margin: 1vw 5vw 5vw 5vw;
+  width: 95%;
+  text-align: center;
+}
+/* Styles the lists to remove bullets and pad */
+.rates ul {
+  padding: 1rem;
+}
+.rates li {
+  list-style: none;
+}
+/* If larger than laptop, change to a row format and center everything */
+@media only screen and (min-width: 1024px) {
+  .subTitle {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .subTitle * {
+    margin: 0vw 1vw;
+  }
+  .rates {
+    margin: 1rem;
+    width: 90%;
+  }
+  .rates h2 {
+    font-size: 2vw;
+  }
+  .rates li {
+    font-size: 1.5vw;
+  }
+}
+/* If tablet or smaller, change the sizes of the words and paddings */
+@media only screen and (max-width: 768px) {
+  .rates {
+    border-radius: 15px;
+    width: 90%;
+  }
+  .rates h2 {
+    font-size: 3.5vw;
+  }
+  .rates li {
+    font-size: 2.5vw;
+  }
+}
+/* If phone or smaller, change the sizes of the words and paddings */
+
+@media only screen and (max-width: 468px) {
+  .rates {
+    border-radius: 15px;
+    width: 90%;
+  }
+  .rates h2 {
+    font-size: 5.5vw;
+  }
+  .rates li {
+    font-size: 4.5vw;
+  }
+}
